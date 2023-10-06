@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
  * main - printing a line using printf
- * Return : 0
+ * Return: 0 (there's no whitespace in Return:)
 */
 
 int main(void)
