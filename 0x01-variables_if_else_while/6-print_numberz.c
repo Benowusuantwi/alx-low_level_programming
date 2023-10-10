@@ -7,9 +7,9 @@
 
 int main(void)
 {
-	char number = '0';
+	int number = 48;/*ASCI value of '0'*/
 
-	while (number <= '9')
+	while (number <= 57)/*ASCI value of '9'*/
 	{
 		putchar(number);
 		number++;
