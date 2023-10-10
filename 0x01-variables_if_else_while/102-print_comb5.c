@@ -1,27 +1,24 @@
 #include <stdio.h>
-#include <unistd.h>
-
 /**
- * main - prints all possible combinations of two two-digit numbers
- * separated by a space and a comma using putchar
+ * main - task 12
  * Return: 0
  */
-
 int main(void)
 {
-	int i = 0;
-	int j = 1;
+	int x;
+	int y;
 
-	for (i = 1; i < 99; i++)
+	for (x = 0; x < 99; x++)
 	{
-		for (j = i + 1; j < 100; j++)
+		for (y = (x + 1); y < 100; y++)
 		{
-			putchar('0' + i / 10);
-			putchar('0' + i % 10);
+			putchar('0' + (x / 10));
+			putchar('0' + (x % 10));
 			putchar(' ');
-			putchar('0' + j / 10);
-			putchar('0' + j % 10);
-			if (i != 98 || j != 99)
+			putchar('0' + (y / 10));
+			putchar('0' + (y % 10));
+
+			if (!(x != 98 && y == 99))
 			{
 				putchar(',');
 				putchar(' ');
