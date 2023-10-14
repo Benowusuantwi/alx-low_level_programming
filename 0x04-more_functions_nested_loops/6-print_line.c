@@ -1,4 +1,4 @@
-nclude "main.h"
+#include "main.h"
 /**
  * print_line - a function to print lowercase alphabets
  * @n: input parameter
@@ -6,7 +6,10 @@ nclude "main.h"
 
 void print_line(int n)
 {
-	for (n = 0; n <= i; n++)
+	int l;
+
+	l = n + 1;
+	for (n = 0; n < l; n++)
 	{
 		if (n > 0)
 		{
