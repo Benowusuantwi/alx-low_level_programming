@@ -5,11 +5,12 @@
 
 void more_numbers(void)
 {
-	int i, j;
+	int i;
+	int j;
 
-	for (i = 0; i < 10; i++)
+	for (i = 48; i < 58; i++)
 	{
-		for (j = 0; j < 15; j++)
+		for (j = 48; j < 58; j++)
 		{
 			_putchar(j);
 		}
