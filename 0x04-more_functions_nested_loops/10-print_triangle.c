@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _isdigit - a function to print lowercase alphabets
+ * print_triangle - a function to print lowercase alphabets
  * @size: input parameter
  */
 
