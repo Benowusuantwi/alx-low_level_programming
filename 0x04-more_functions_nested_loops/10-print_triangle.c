@@ -1,8 +1,7 @@
 #include "main.h"
 /**
  * _isdigit - a function to print lowercase alphabets
- * @c: input parameter
- * Return: 0 or 1
+ * @size: input parameter
  */
 
 void print_triangle(int size)
