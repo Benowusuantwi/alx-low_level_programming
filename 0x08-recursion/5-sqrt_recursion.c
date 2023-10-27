@@ -2,7 +2,7 @@
 
 int sqrt_calculator(int n, int i);
 /**
- * _sqrt_recursion - a function to print lowercase alphabets
+ * _sqrt_recursion - a function that returns the natural square root of a number
  * @n: input parameter
  * Return: result of sqrt of n
  */
