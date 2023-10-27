@@ -4,6 +4,7 @@
  * raised to the power of y
  * @x: input parameter to be raised to the power y (x^y)
  * @y: input power value
+ * Return: x power y
  */
 
 int _pow_recursion(int x, int y)
