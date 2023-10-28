@@ -1,14 +1,10 @@
 #include "main.h"
 /**
- * _puts - a function to print a string, followed by a new line
- * @str: input parameter
+ * _puts - a function for the library
+ * @s: input string
  */
 
-void _puts(char *str)
+void _puts(char *s)
 {
-	while (*str != '\0')
-	{
-		_putchar(*str++);
-	}
-	_putchar('\n');
+	/* code is in 0x05*/
 }
