@@ -1,8 +1,8 @@
 #ifndef DOG_H
 #define DOG_H
 
-	/**
-	 * struct dog - a struct containing a dog's credentials
+/**
+* struct dog - a struct containing a dog's credentials
 	 * @name: input char *
 	 * @age: input float
 	 * @owner: input char *
