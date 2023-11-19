@@ -3,7 +3,7 @@
 
 /**
  * struct list_s - singly linked list
- * str: malloced string
+ * @str: malloced string
  * @len: length of the str
  * @next: points to the next node
  * 
@@ -14,7 +14,8 @@ typedef struct list_s
 	char *str;
 	unsigned int len;
 	struct list_s *next;
-}list_t;
+}
+list_t;
 
 int _putchar(char c);
 size_t print_list(const list_t *h);
