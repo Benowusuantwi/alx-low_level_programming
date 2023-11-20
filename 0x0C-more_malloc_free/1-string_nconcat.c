@@ -1,10 +1,12 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- * *string_nconcat - a function to print lowercase alphabets
+ * *string_nconcat - a function that concatenates two strings
  * @s1: input string 1
  * @s2: input string 2
- * Return: character
+ * @n: input integer
+ *
+ * Return: string
  */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
@@ -12,7 +14,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int i, j, k, l;
 	char *str;
 
-	i = 0; j = 0; k = 0; l = 0;
+	i = 0, j = 0, k = 0, l = 0;
 
 	if (s1 == NULL)
 		s1 = "";
