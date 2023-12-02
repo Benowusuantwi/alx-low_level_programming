@@ -21,22 +21,23 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 	{
-		dprintf(STDERR_FILENO, "%s", "Usage: cp file_from file_to\n");
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 	src = open(argv[1], O_RDONLY);
 	check_stat(src, -1, argv[1], 'O');
 	dest = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, mode);
 	check_stat(dest, -1, argv[2], 'W');
-	while (num_read == 1024)
+	while ((num_read == read(src, buffer, sizeof(buffer))) > 0)
 	{
-		num_read = read(src, buffer, sizeof(buffer));
 		if (num_read == -1)
-			check_stat(-1, -1, argv[1], 'O');
+			check_stat(-1, src, argv[1], 'O');
 		n_wrote = write(dest, buffer, num_read);
-		if (n_wrote == -1)
-			check_stat(-1, -1, argv[2], 'W');
+		if (n_wrote == -1 || n_wrote != num_read)
+			check_stat(-1, dest, argv[2], 'W');
 	}
+	if (num_read == -1)
+		check_stat(-1, src, argv[1], 'O');
 	close_src = close(src);
 	check_stat(close_src, src, NULL, 'C');
 	close_dest = close(dest);
